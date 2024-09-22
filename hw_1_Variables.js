@@ -84,5 +84,20 @@ console.log('item_7 == ' + seventhVariable + ',' + ' ' + 'item_7_type == ' + sev
 // Напишите программу, которая принимает целое положительное число n (одно любое число от 1 до 9),
 // и выводит сумму равную n + nn + nnn, где n не перемножаются, а конкатенируются
 
-let n = 3;
-console.log (n + ++n + ++n);
+const n = '3';
+
+// 1 вариант
+// const a = n+n;
+// const b = n+n+n;
+// const c = Number(n)+Number(a)+Number(b); 
+// console.log ('n + nn + nnn = ' + c);
+
+// 2 вариант
+// const a = n+n;
+// const b = n+n+n;
+// const c = 1*n + 1*a +1*b                
+// console.log ('n + nn + nnn = ' + c);
+
+// 3 вариант
+const a = Number(n)+ Number(n+n) + Number(n+n+n);
+console.log ('n + nn + nnn = ' + a);
