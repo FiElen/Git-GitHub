@@ -69,16 +69,12 @@ const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawa
 let myPizzas = ['carbonara','pePeroni', 'caprichosa', 'diablo', '4 cheeses', 'Hawai','salami','kids'];
 const competitorPizzasNew=competitorPizzas.map(competitorPizzas=>competitorPizzas.toLowerCase());
 const myPizzasNew=myPizzas.map(myPizzas=>myPizzas.toLowerCase());
-for (let i=0;i<myPizzasNew.length;i++){
-  if (competitorPizzasNew[i] !== myPizzasNew [i]){
-    myPizzas=myPizzasNew.filter(i=> !competitorPizzasNew.includes(i));
+  if (myPizzas=myPizzasNew.filter(i=> !competitorPizzasNew.includes(i))){
     console.log(...myPizzas);
-    break;
   }else{
   console.log(null);
-  break;
 }
-}
+
 
 /* ----------------------------------------------------Task 3*-------------------------------------------------------
 Удалить дубликаты
