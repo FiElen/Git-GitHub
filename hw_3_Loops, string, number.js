@@ -44,11 +44,11 @@ console.log(text.replaceAll(' ','1'));
 */
 
 for(i=1;i<101;i++){
-  if (i%3===0 && i%5===0) {
+  if (i%3 && i%5) {
     console.log(`Число ${i} - делится без остатка на 3 и на 5`);
-  } else if (i%3===0){
+  } else if (i%3){
     console.log(`Число ${i} - делится на 3`);
-  } else if (i%5===0){
+  } else if (i%5){
   console.log(`Число ${i} - делится на 5`);
 } else {
   console.log (`Число ${i}`);
@@ -61,4 +61,20 @@ for(i=1;i<101;i++){
   и выводить в консоль количество гласных и согласных букв в этом слове. 
   Ответ должен выводиться шаблонным литералом вида word contains x vowels and y consonants
 */
+
+const word='Пример!!!е';
+const wordFinish= word.toUpperCase();
+const vowels = 'АОИУЯЮЕЁЫЭ';
+const consonants = 'БВГДЖЗЙКЛМНПРСТФХЦЧШЩ';
+let vowelsCount = 0;
+let consonantsCount = 0;
+for(let char of wordFinish){
+    if (vowels.includes(char)){
+      vowelsCount++;
+  }
+    if (consonants.includes(char)){
+      consonantsCount++;
+  }
+  console.log (`word contains ${vowelsCount}-vowels and ${consonantsCount}-consonants`);
+}
 

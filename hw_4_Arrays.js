@@ -55,7 +55,7 @@ console.log (`first === ${first}; second === ${second}; rest === ${rest}`);
 const arrNumber1 = [1,2,3,4,5];
 const arrNumber2 = [6, 7, 8, 9, 10];
 const mergedArray = [...arrNumber1,...arrNumber2];
-console.log (mergedArray);
+console.log (...mergedArray);
 
 /* ----------------------------------------------------Task 2-------------------------------------------------------
 1. У вас есть массив названий пицц вашего конкурента. Создайте скрипт с циклом, который будет проверять ваш набор названий пицц (массив) 
@@ -73,7 +73,25 @@ const myPizzasNew=myPizzas.map(myPizzas=>myPizzas.toLowerCase());
     console.log(...myPizzas);
   }else{
   console.log(null);
-}
+} // метод массивов
+
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const myPizzas = ['carbonara','pePeroni', 'caprichosa', 'diablo', '4 cheeses', 'Hawai','salami','kids'];
+const competitorPizzasNew=competitorPizzas.map(competitorPizzas=>competitorPizzas.toLowerCase());
+const myPizzasNew=myPizzas.map(myPizzas=>myPizzas.toLowerCase());
+let countResult = 0;
+for (let result of myPizzasNew){
+  if (!competitorPizzasNew.includes(result)){
+    console.log (result);
+    countResult++;
+  }
+  if (countResult===0){
+    console.log(null);
+    break;
+  }
+} // через цикл
+
+
 
 
 /* ----------------------------------------------------Task 3*-------------------------------------------------------
@@ -85,5 +103,4 @@ const myPizzasNew=myPizzas.map(myPizzas=>myPizzas.toLowerCase());
 
 const arrNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9];
 let arrNew = [...new Set(arrNumber)];
-console.log(arrNew);
-
+console.log(...arrNew); 
